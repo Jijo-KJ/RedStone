@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Redstone Oman</title>
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: grey;
+      color: black;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .logo img {
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-text h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #a50000;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    .logo-text p {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #777;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #a50000;
+      border-bottom: 2px solid #a50000;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #a50000;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #999;
+    }
+
+    button {
+      padding: 0.8rem;
+      background: #a50000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #c40000;
+    }
+
+    .address-box {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      text-align: center;
+      color: #555;
+    }
+
+    .address-box h3 {
+      color: #a50000;
+      margin-bottom: 0.5rem;
+    }
+
+   
+
+    @media (max-width: 600px) {
+      .contact-section {
+        margin: 50px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/logored.png" alt="Redstone Logo" />
+      <div class="logo-text">
+        <h1>RED STONE</h1>
+        <p>Where Quality meets Innovation</p>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="redstonehome.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="services.html">SERVICES</a>
+      <a href="clients.html">CLIENTS</a>
+      <a href="contact.html" class="active">CONTACT US</a>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/mdkzyqgv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="address-box">
+      <h3>Redstone Engineering Works and Solutions LLC</h3>
+      <p>P.O. Box 68</p> <p> P.C. 100, Muscat Sultanate of Oman</p>
+      <p>Contact: +968 94041048</p>
+    </div>
+
+    
+  </section>
+
+  <script>
+    const currentPath = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href");
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
