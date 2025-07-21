@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HVAC - Redstone Oman</title>
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    nav {
+      background: white;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      height: 80px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+   .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* space between logo image and text */
+}
+
+.logo img {
+  height: 80px; /* keep your existing size */
+  object-fit: contain;
+  display: block;
+}
+
+ .logo-text h1 {
+      font-family: 'Merriweather', serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #a50000;
+      margin: 0;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+.logo-text p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555; /* subtle gray for subtitle */
+  margin: 0;
+  line-height: 1.2;
+}
+
+    nav .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 2rem;
+    }
+    nav .nav-links a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+      line-height: 80px;
+    }
+    nav .nav-links a:hover,
+    nav .nav-links a.active {
+      color: #a50000;
+      border-bottom: 2px solid #a50000;
+    }
+    .hero-banner {
+      background: url('images/hvac2.jpg') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.85);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero-banner h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards ease-out 0.3s;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto 5rem;
+      padding: 0 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+    }
+    .section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #eee;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .section:last-child { border-bottom: none; }
+    .section h2 {
+      color: #a50000;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 900px;
+    }
+    ul {
+      font-size: 1.1rem;
+      color: #444;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .section.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .go-back-wrapper {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    .go-back-btn {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .go-back-btn:hover {
+      background-color: #a50000;
+      color: white;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .hero-banner { height: 220px; }
+      .hero-banner h1 { font-size: 2rem; }
+      nav .nav-links { gap: 1rem; }
+      .container { margin: 2rem 1rem 3rem; padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+  <img src="images/logored.png" alt="Redstone Logo" />
+  <div class="logo-text">
+    <h1>RED STONE</h1>
+    <p>Where Reliability meets Innovation</p>
+  </div>
+</div>
+
+    <div class="nav-links">
+      <a href="redstonehome.html">HOME</a>
+      <a href="about.html" class="active">ABOUT US</a>
+      <a href="services.html">SERVICES</a>
+      <a href="clients.html">CLIENTS</a>
+      <a href="contact.html">CONTACT US</a>
+    </div>
+  </nav>
+
+  <section class="hero-banner">
+    <h1>HVAC Services</h1>
+  </section>
+
+  <div class="container">
+    <section class="section">
+      <h2>Heating Solutions</h2>
+      <p>
+        Efficient and sustainable heating systems designed to provide optimal comfort during all seasons, ensuring energy efficiency and environmental responsibility.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Ventilation Systems</h2>
+      <p>
+        Our ventilation solutions enhance air circulation and quality, removing contaminants and ensuring a healthy indoor environment across commercial and residential spaces.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Air Conditioning</h2>
+      <p>
+        We install and maintain modern AC systems that deliver consistent cooling with minimal noise and low energy consumption, tailored to meet the unique demands of your space.
+      </p>
+    </section>
+
+<div style="text-align: center; padding: 2rem;">
+    <a href="services.html" class="go-back-btn">Go Back</a>
+  </div>
+
+</div>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+<style>
+  .go-back-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .go-back-btn:hover {
+    background-color: #a50000;
+    color: white;
+  }
+</style>
+
+</body>
+</html>
